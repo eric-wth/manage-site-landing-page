@@ -2,6 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import logo from '../public/logo.svg';
 import illustration from '../public/illustration-intro.svg';
+import avatarAnisha from '../public/avatar-anisha.png';
+import avatarAli from '../public/avatar-ali.png';
+import avatarRichard from '../public/avatar-richard.png';
+import facebookIcon from '../public/icon-facebook.svg';
+import instagramIcon from '../public/icon-instagram.svg';
+import pinterestIcon from '../public/icon-pinterest.svg';
+import twitterIcon from '../public/icon-twitter.svg';
+import youtubeIcon from '../public/icon-youtube.svg';
 
 const App = () => {
 
@@ -124,35 +132,91 @@ const App = () => {
       </section>
 
       {/* testimonials */}
-      <section class='mb-16 border-2 border-dashed border-black'>
-        <h1 class='text-2xl font-bold text-center'>What they've said</h1>
+      <section class='mb-16'>
+        <h1 class='text-4xl font-bold text-center mb-16'>What they've said</h1>
+        
+        {/* testimonial container */}
+        <div class='flex flex-row p-6 space-x-6'>
+
+          {/* testimonial 1 */}
+          <div class='flex flex-col items-center rounded-lg bg-veryLightGray'>
+            <Image src={avatarAnisha} alt='' class='w-16 -mt-14' />
+            <h5 class='text-lg font-bold text-center'>Anisha Li</h5>
+            <p class='text-sm text-center text-darkGrayishBlue'>
+              "Manage has supercharged our team's workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated."
+            </p>
+          </div>
+
+          {/* testimonial 2 */}
+          <div class='flex flex-col items-center rounded-lg bg-veryLightGray'>
+            <Image src={avatarAli} alt='' class='w-16 -mt-14' />
+            <h5 class='text-lg font-bold'>Ali Bravo</h5>
+            <p class='text-sm text-darkGrayishBlue'>
+              "We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and everyone is
+              much more focused."
+            </p>
+          </div>
+
+          {/* testimonial 3 */}
+          <div class='flex flex-col items-center rounded-lg bg-veryLightGray'>
+            <Image src={avatarRichard} alt='' class='w-16 -mt-14' />
+            <h5 class='text-lg font-bold'>Richard Watts</h5>
+            <p class='text-sm text-darkGrayishBlue'>
+              "Manage has supercharged our team's workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated."
+            </p>
+          </div>
+        </div>
+
+        <div class='flex justify-center mt-6'>
+          <a href='#' class='px-4 py-2 text-white rounded-full bg-brightRed'>
+              Get Started
+          </a>
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section class='border-2 border-dashed border-black'>
+      <section class='bg-brightRed'>
         {/* flex container */}
-        <div class='flex justify-center py-8'>
-          <div class=''>
-            <p class='text-3xl mr-96 font-bold'>Simplify how your team works today</p>
+        <div class='flex items-center justify-center py-8'>
+          <div>
+            <p class='text-4xl mr-96 font-bold leading-tight text-white max-w-xl'>Simplify how your team works today</p>
           </div>
 
-          <a href='#' class='px-4 py-2 text-white rounded-full bg-brightRed'>
+          <a href='#' class='max-h-10 px-4 py-2 text-brightRed rounded-full bg-white shadow-2xl baseline'>
             Get Started
           </a>
         </div>        
       </section>
 
       {/* footer */}
-      <footer class='py-10 px-10'>
+      <footer class='py-10 px-10 bg-veryDarkBlue text-white'>
         {/* flex container */}
         <div class='flex justify-center space-x-24'>
-
           {/* logo and socials */}
           <div>
             <Image src={logo} alt='website logo' class='mb-20'/>
 
-            <div>
-              <p>social media logos here</p>
+            <div class='flex justify-between'>
+              <a href='#'>
+                <Image src={facebookIcon} />
+              </a>
+              <a href='#'>
+                <Image src={youtubeIcon} />
+              </a>
+              <a href='#'>
+                <Image src={twitterIcon} />
+              </a>
+              <a href='#'>
+                <Image src={pinterestIcon} />
+              </a>
+              <a href='#'>
+                <Image src={instagramIcon} />
+              </a>
             </div>
           </div>
 
